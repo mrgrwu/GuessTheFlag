@@ -26,11 +26,7 @@ struct ContentView: View {
                     Button(action: {
                         self.flagTapped(number)
                     }) {
-                        Image(self.countries[number])
-                            .renderingMode(.original)
-                            .clipShape(Capsule())
-                            .overlay(Capsule().stroke(Color.black, lineWidth: 1))
-                            .shadow(color: .black, radius: 2)
+                        FlagImage(imageName: self.countries[number])
                     }
                 }
                 Text("Score: \(score)").foregroundColor(.white).font(.largeTitle)
